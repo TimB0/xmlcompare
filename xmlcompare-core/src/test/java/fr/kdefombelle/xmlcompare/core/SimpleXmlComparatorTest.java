@@ -42,6 +42,14 @@ public class SimpleXmlComparatorTest {
 	}
 
 	@Test
+	public void testCompareDisney() throws Exception {
+		XmlComparatorConfiguration configuration = new XmlComparatorConfiguration();
+		Iterable<Difference> differences = xmlComparator.compare(getFile("XMLCompareFile1.xml"), getFile("XMLCompareFile2.xml"),
+				configuration);
+		assertTrue(differences.iterator().hasNext());
+	}
+
+	@Test
 	public void testCompareIgnoreAttributes() throws Exception {
 		XmlComparatorConfiguration configuration = new XmlComparatorConfiguration();
 		configuration.setIgnoreAttributes(true);
