@@ -17,6 +17,7 @@
 	</properties>
 
 	<modules>
+		<module>commons-util</module>
 		<module>xmlcompare-core</module>
 		<module>xmlcompare-gui</module>
 		<module>xmlcompare-cli</module>
